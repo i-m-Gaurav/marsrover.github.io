@@ -41,6 +41,8 @@ var getCamera;
 var today;
 
 
+//function for hamburger menu
+
 window.onclick = function(e){
   const hide = document.getElementById('menu_btn');
   const ham_menu = document.getElementById('ham_menu');
@@ -62,9 +64,7 @@ window.onclick = function(e){
   }
 }
 
-/**
- * * * This function wil allow user to choose the following rovers, there are three rovers available;
- */
+// it will fetch current day using select option
 
 function getDay() {
   var dateText = document.getElementById("dateText");
@@ -85,6 +85,11 @@ function getDay() {
 
   console.log(update_url);
 }
+
+/**
+ * * * This function wil allow user to choose the following rovers, there are three rovers available;
+ */
+
 function selectRover() {
   var curiosity_rover = document.getElementById("curiosity_r").checked;
   var opportunity_rover = document.getElementById("opportunity_r").checked;
@@ -112,26 +117,6 @@ function check_spi() {
 
 
 
-// function chooseRover() {
-//   curiosity_box = document.getElementById("Curiosity").checked;
-//   Opportunity_box = document.getElementById("Opportunity").checked;
-//   Spirit_box = document.getElementById("Spirit").checked;
-
-//   if (curiosity_box === true) {
-//     rover = curiosity;
-//     // currentDate();
-//     curiosityCalender();
-//     // chooseDateSection();
-//     // goToChooseRover();
-//   } else if (Opportunity_box === true) {
-//     rover = opportunity;
-//     opportunityCalender();
-//   } else {
-//     rover = spirit;
-//     spiritCalender();
-//   }
-
-// }
 // * this function will send the httpRequest to the nasa api server, it takes three arguments, 1. Method (that could be GET or POST),2. url , 3. mode (either true or false).
 
 function sendHttpRequest(method, update_url, mode) {
@@ -626,6 +611,7 @@ function fetchCamera() {
             break;
           case "MAHLI":
             document.getElementById("mahli").style.display = "inline";
+            break;
           case "MARDI":
             document.getElementById("mardi").style.display = "inline";
             break;
@@ -638,7 +624,6 @@ function fetchCamera() {
           case "MINITES":
             document.getElementById("minites").style.display = "inline";
             break;
-
           default:
         }
       }
