@@ -246,8 +246,6 @@ body {
   background-color: #fff;
   margin: 15px;
   border-radius: 7px;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,8 +275,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 220px;
-  margin: 15px;
+  height: 260px;
+  padding: 2px 16px;
   font-family: montserrat;
 }
 
@@ -321,8 +319,6 @@ body {
 
 .choose_rover_section .select_rover_container .select_rover {
   background-color: white;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .choose_rover_section .select_rover_container .select_rover {
@@ -420,8 +416,7 @@ body {
   background-color: #fff;
   color: #5a2017;
   font-family: montserrat;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  font-weight: 700;
 }
 
 .choose_date_page .choose_date_box button {
@@ -430,10 +425,9 @@ body {
   outline: none;
   border-radius: 3px;
   font-family: montserrat;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   color: #5a2017;
   background-color: #fff;
+  font-weight: 700;
 }
 
 .camera_angles_section {
@@ -566,11 +560,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 12%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  /*            background-color: aqua;*/
+  width: 100%;
 }
 
 .button {
@@ -707,7 +697,6 @@ button:focus {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   margin: 10px auto;
-  padding: 3px;
   height: 240px;
   width: 360px;
   border-radius: 8px;
@@ -797,34 +786,41 @@ button:focus {
 
 #modalHeader {
   position: absolute;
-  height: 80px;
+  height: 100vh;
   width: 100%;
   top: 0;
   display: none;
+  background-color: green;
 }
 
 #modalHeader.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: rgba(0, 0, 0, 0.096);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-animation: modalImageOpenAnimation 0.3s linear;
           animation: modalImageOpenAnimation 0.3s linear;
 }
 
 #closeDiv {
   /* margin-right: 25px; */
+  background-color: red;
+  position: absolute;
   top: 10px;
   right: 10px;
-  position: absolute;
   height: 52px;
   border-radius: 100px;
   border: 1px solid transparent;
-  background-color:transparent;
 }
 
 #closeDiv:hover {
@@ -835,17 +831,17 @@ button:focus {
 
 .close {
   fill: white;
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
 }
 
 #close {
-
   padding: 10px;
   background-color: transparent;
   height: 52px;
   width: 52px;
   border: 2px solid transparent;
 }
-
 
 .lrb.active {
   fill: black;
